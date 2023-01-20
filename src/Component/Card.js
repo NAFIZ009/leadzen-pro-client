@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 
 const Card = ({data}) => {
-    const {name,contact,city,state,discription,address,designation,email,phone,country}=data;
+    const {name,contact,city,state,about,address,designation,email,phone,country}=data;
     const ref=useRef();
 
     const btnFun=e=>{
@@ -61,7 +61,7 @@ const Card = ({data}) => {
                                     description
                                     </h1>
                                     <p className='font-bold'>
-                                    {discription}
+                                    {about}
                                     </p>
                                     </div>
                                 </div>
