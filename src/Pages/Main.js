@@ -9,7 +9,7 @@ const Main = () => {
     const [pageNum,setPageNum]=useState(1);
     const itemPerPage=5;
     useEffect(()=>{
-        fetch('http://localhost:5000/data')
+        fetch('https://leadzen-pro.vercel.app/data')
         .then(res=>res.json())
         .then(data=>setData(data));
     },[]);
