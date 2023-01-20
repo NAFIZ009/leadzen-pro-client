@@ -3,7 +3,7 @@ import Main from './Pages/Main';
 
 function App() {
   return (
-    <div className="App  bg-purple-200 py-20">
+    <div className="App  bg-purple-200 py-5">
           <Main></Main>
     </div>
   );
