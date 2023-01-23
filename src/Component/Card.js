@@ -2,7 +2,9 @@ import React from 'react';
 import { useRef } from 'react';
 
 const Card = ({data}) => {
-    const {name,contact,city,state,about,address,designation,email,phone,country}=data;
+    const {name,company,address,email,phone,website}=data;
+    const {name:contact,catchPhrase}=company;
+    const {street,city,zipcode,suite}=address;
     const ref=useRef();
 
     const btnFun=e=>{
@@ -46,25 +48,15 @@ const Card = ({data}) => {
 
                     <div className='flex flex-col gap-1' >
                         <h1 className='text-lg font-bold text-gray-500' >
-                        STATE
+                        Zip Code 
                         </h1>
                         <p className='font-bold'>
-                        {state}
+                        {zipcode}
                         </p>
                     </div>
 
                     <div className='py-5 lg:order-last w-full border-2 border-gray-200 rounded-lg hidden' ref={ref} >
                             <div className="py-5 px-3 text-left gap-6 flex flex-col justify-between align-center " style={{textTransform:"capitalize"}}>
-                                <div>
-                                    <div className='flex flex-col gap-1'>
-                                    <h1 className='text-lg font-bold text-gray-500'>
-                                    description
-                                    </h1>
-                                    <p className='font-bold'>
-                                    {about}
-                                    </p>
-                                    </div>
-                                </div>
 
                                 <div className='grid lg:grid-cols-2 gap-4'>
 
@@ -82,15 +74,15 @@ const Card = ({data}) => {
                                         address
                                         </h1>
                                         <p className='font-bold'>
-                                        {address}
+                                        {`${street},${suite},${city}`}
                                         </p>
                                     </div>
                                     <div className='flex flex-col gap-1' >
                                         <h1 className='text-lg font-bold text-gray-500' >
-                                        designation
+                                        catch phrase
                                         </h1>
                                         <p className='font-bold'>
-                                        {designation}
+                                        {catchPhrase}
                                         </p>
                                     </div>
                                     <div className='flex flex-col gap-1' >
@@ -111,10 +103,10 @@ const Card = ({data}) => {
                                     </div>
                                     <div className='flex flex-col gap-1' >
                                         <h1 className='text-lg font-bold text-gray-500' >
-                                        country
+                                        website
                                         </h1>
                                         <p className='font-bold'>
-                                        {country}
+                                        {website}
                                         </p>
                                     </div>
                                 
